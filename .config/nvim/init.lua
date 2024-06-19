@@ -189,7 +189,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Custom Keymaps ]]
 vim.keymap.set('n', '<leader>C', ':let @+ = expand("%")<cr>', { desc = 'Copy relative path' })
-vim.keymap.set('n', '<leader>x', ':Ex<cr>', { desc = 'Explorer' })
+vim.keymap.set('n', '<leader>t', ':Neotree position=current<cr>', { desc = 'Explorer in new Window' })
+vim.keymap.set('n', '<leader>x', ':Neotree<cr>', { desc = 'Explorer in Split' })
 vim.keymap.set('n', '[c', function()
   require('treesitter-context').go_to_context(vim.v.count1)
 end, { silent = true })
@@ -231,6 +232,17 @@ vim.opt.rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
+
+  {
+    'nvim-neo-tree/neo-tree.nvim',
+    branch = 'v3.x',
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'nvim-tree/nvim-web-devicons', -- not strictly required, but recommended
+      'MunifTanjim/nui.nvim',
+      -- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
+    },
+  },
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
