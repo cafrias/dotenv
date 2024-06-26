@@ -189,8 +189,8 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 
 -- [[ Custom Keymaps ]]
 vim.keymap.set('n', '<leader>C', ':let @+ = expand("%")<cr>', { desc = 'Copy relative path' })
-vim.keymap.set('n', '<leader>t', ':Neotree position=current<cr>', { desc = 'Explorer in new Window' })
-vim.keymap.set('n', '<leader>x', ':Neotree<cr>', { desc = 'Explorer in Split' })
+vim.keymap.set('n', '<leader>t', ':Neotree % position=current<cr>', { desc = 'Explorer in new Window' })
+vim.keymap.set('n', '<leader>x', ':Neotree %<cr>', { desc = 'Explorer in Split' })
 vim.keymap.set('n', '[c', function()
   require('treesitter-context').go_to_context(vim.v.count1)
 end, { silent = true })
