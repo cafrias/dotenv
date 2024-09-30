@@ -114,7 +114,9 @@ function nrtw {
 }
 
 function loadDotEnv {
-	export $(grep -v '^#' .env | xargs)
+	local filename=${1:-.env}
+
+	export $(grep -v '^#' "$filename" | xargs)
 }
 
 #
