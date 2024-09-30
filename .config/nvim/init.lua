@@ -577,6 +577,10 @@ require('lazy').setup({
         --   root_dir = require('lspconfig.util').find_git_ancestor,
         -- },
 
+        stylelint_lsp = {
+          filetypes = { 'css', 'scss' },
+        },
+
         lua_ls = {
           -- cmd = {...},
           -- filetypes { ...},
