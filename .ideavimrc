@@ -72,8 +72,8 @@ let g:WhichKeyDesc_action_search = "<leader>as Open command modal"
 let g:WhichKeyDesc_file_quickLook = "<leader><leader> Recent files"
 
 let g:WhichKeyDesc_file_nav = "<leader>f File navigation"
-let g:WhichKeyDesc_file_nav_goto_file = "<leader>ff Go to file"
-let g:WhichKeyDesc_file_nav_goto_content = "<leader>fc Search for file content"
+let g:WhichKeyDesc_file_nav_goto_file = "<leader>sf Go to file"
+let g:WhichKeyDesc_file_nav_goto_content = "<leader>sg Search for file content"
 let g:WhichKeyDesc_file_nav_show_recent_files = "<leader>fr Show recent files"
 let g:WhichKeyDesc_file_nav_show_recent_locations = "<leader>fl Show recent locations"
 
