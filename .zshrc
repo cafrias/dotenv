@@ -70,7 +70,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git nvm)
+plugins=(git nvm poetry)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,13 +119,6 @@ function loadDotEnv {
 	export $(grep -v '^#' "$filename" | xargs)
 }
 
-#
-# pyenv
-#
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
 # bun completions
 [ -s "/home/cfrias/.bun/_bun" ] && source "/home/cfrias/.bun/_bun"
 
@@ -140,3 +133,6 @@ export PATH=$PATH:~/go/bin
 # User Bin
 export PATH=~/bin:$PATH
 
+
+# Created by `pipx` on 2025-01-31 03:00:56
+export PATH="$PATH:/home/cfrias/.local/bin"
