@@ -845,10 +845,6 @@ require('lazy').setup({
   'nvim-treesitter/nvim-treesitter-context',
 
   {
-    'github/copilot.vim',
-  },
-
-  {
     'rmagatti/auto-session',
     config = function()
       -- Auto Session
