@@ -101,6 +101,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias copy='xsel --clipboard --input'
 alias paste='xsel --clipboard --output'
+alias c="clear"
 
 #
 # Functions
